@@ -17,23 +17,35 @@ if wind_speed < 0 or wind_speed > 252:
     print("\nError: Wind speed must be between 0 and 252 miles per hour.")
     wind_speed = int(input("\nPlease enter wind speed in miles per hour (Range 0 - 252 mph; normal is 2): "))  # Reprompt for user input
 
-# Prompt user to enter the weather type (sunny, cloudy, rainy, snowy)
-weather_type = input("\nPlease enter the weather type (sunny, rainy, snowy): ").lower()
+# Prompt user to enter the weather type (sunny, rainy, snowy) removing leading/trailing whitespace and converting to lowercase
+weather_type = input("\nPlease enter the weather type (sunny, rainy, snowy): ").strip().lower()
 
 # Validate user input to ensure it is a valid weather type
 if weather_type not in ["sunny", "rainy", "snowy"]:
     print("\nError: Weather type must be one of the following: sunny, rainy, snowy.")
-    weather_type = input("\nPlease enter the weather type (sunny, rainy, snowy): ").lower()  # Reprompt for user input
+    weather_type = input("\nPlease enter the weather type (sunny, rainy, snowy): ").strip().lower()  # Reprompt for user input
 
 # Create if-elif-else statement to make wardrobe suggestions based on the user's input
 if temperature <= 40 and wind_speed >= 25 and weather_type == "snowy":
     print("\nIt is very cold and windy. Wear a heavy coat, flannel-lined pants, scarf, gloves, and boots.")
-elif temperature <= 40 and 5 <= wind_speed < 25 and weather_type == "snowy":
-    print("\nIt is cold and snowy. Wear a heavy coat, warm pants, gloves, and insulated boots.")
+elif temperature <= 40 and wind_speed < 25 and weather_type == "snowy":
+    print("\nIt is cold, snowy, and possibly windy. Wear a heavy coat, warm pants, gloves, and insulated boots.")
+elif temperature > 40 and wind_speed >= 20 and weather_type == "snowy":
+    print("\nIt is cooler, snowy, and windy. Wear a coat and scarf, possibly gloves, and boots.")
+elif temperature > 40 and wind_speed < 20 and weather_type == "snowy":
+    print("\nIt is cooler and snowy. Wear a coat, scarf, and warm shoes.")
+elif temperature <= 40 and wind_speed >= 10 and weather_type == "sunny":
+    print("\nIt is cold, sunny, and windy. Wear a warm coat, scarf, gloves, and boots.")
+elif temperature <= 40 and wind_speed < 10 and weather_type == "sunny":
+    print("\nIt is cold and sunny. Wear a warm coat, scarf, gloves, and boots.") 
 elif temperature <= 60 and wind_speed >= 20 and weather_type == "rainy":
     print("\nThe weather is cool, rainy, and windy. Wear a waterproof jacket, jeans, waterproof shoes, and carry an umbrella.")
 elif temperature <= 60 and wind_speed < 20 and weather_type == "rainy":
     print("\nThe weather is cool and rainy. Wear a raincoat, long-sleeve shirt, pants, and waterproof shoes.")
+elif temperature > 60 and wind_speed >= 15 and weather_type == "rainy":
+    print("\nThe weather is warm, rainy, and windy. Wear a light rain jacket, t-shirt, shorts or pants, and waterproof shoes.")
+elif temperature > 60 and wind_speed < 15 and weather_type == "rainy":
+    print("\nThe weather is warm and rainy. Wear a light rain jacket, t-shirt, shorts or pants, and waterproof shoes.")
 elif 41 <= temperature <= 60 and wind_speed >= 15 and weather_type == "sunny":
     print("\nIt is sunny, mild, and windy. Wear a windbreaker, long-sleeve shirt, pants, and sunglasses.")
 elif 41 <= temperature <= 60 and wind_speed < 15 and weather_type == "sunny":
@@ -59,5 +71,8 @@ else:
 # 2. GeeksforGeeks. (2026, June 16). "Python Lists" GeeksforGeeks.
 #    https://www.geeksforgeeks.org/python/python-lists/
 #
-# 3. Miller, B. (n.d.). "Programming in Python 3" zyBooks, a Wiley Brand.
+# 3. GeeksforGeeks. (2026, July 1). "Python String strip() Method" GeeksforGeeks.
+#    https://www.geeksforgeeks.org/python/python-string-strip/
+#
+# 4. Miller, B. (n.d.). "Programming in Python 3" zyBooks, a Wiley Brand.
 #    Canvas https://www.zybooks.com/
