@@ -6,48 +6,48 @@ temperature = int(input("Please enter temperature in Fahrenheit (Range -129 - +1
 
 # Validate user input to ensure it is within the correct range 
 if temperature < -129 or temperature > 134:
-    print("Error: Temperature must be between -129 and 134 degrees Fahrenheit.")
-    temperature = int(input("Please enter temperature in Fahrenheit (Range -129 - +134; normal is 72): "))  # Reprompt for user input
+    print("\nError: Temperature must be between -129 and 134 degrees Fahrenheit.")
+    temperature = int(input("\nPlease enter temperature in Fahrenheit (Range -129 - +134; normal is 72): "))  # Reprompt for user input
 
 # Prompt user to enter wind speed in miles per hour
-wind_speed = int(input("Please enter wind speed in miles per hour (Range 0 - 252 mph; normal is 2): "))
+wind_speed = int(input("\nPlease enter wind speed in miles per hour (Range 0 - 252 mph; normal is 2): "))
 
 # Validate user input to ensure it is within the correct range
 if wind_speed < 0 or wind_speed > 252:
-    print("Error: Wind speed must be between 0 and 252 miles per hour.")
-    wind_speed = int(input("Please enter wind speed in miles per hour (Range 0 - 252 mph; normal is 2): "))  # Reprompt for user input
+    print("\nError: Wind speed must be between 0 and 252 miles per hour.")
+    wind_speed = int(input("\nPlease enter wind speed in miles per hour (Range 0 - 252 mph; normal is 2): "))  # Reprompt for user input
 
 # Prompt user to enter the weather type (sunny, cloudy, rainy, snowy)
-weather_type = input("Please enter the weather type (sunny, cloudy, rainy, snowy): ").lower()
+weather_type = input("\nPlease enter the weather type (sunny, cloudy, rainy, snowy): ").lower()
 
 # Validate user input to ensure it is a valid weather type
 if weather_type not in ["sunny", "rainy", "snowy"]:
-    print("Error: Weather type must be one of the following: sunny, rainy, snowy.")
-    weather_type = input("Please enter the weather type (sunny, rainy, snowy): ").lower()  # Reprompt for user input
+    print("\nError: Weather type must be one of the following: sunny, rainy, snowy.")
+    weather_type = input("\nPlease enter the weather type (sunny, rainy, snowy): ").lower()  # Reprompt for user input
 
 # Create if-elif-else statement to make wardrobe suggestions based on the user's input
 if temperature <= 40 and wind_speed >= 25 and weather_type == "snowy":
-    print("It is very cold and windy. Wear a heavy coat, flannel-lined pants, scarf, gloves, and boots.")
+    print("\nIt is very cold and windy. Wear a heavy coat, flannel-lined pants, scarf, gloves, and boots.")
 elif temperature <= 40 and 5 <= wind_speed < 25 and weather_type == "snowy":
-    print("It is cold and snowy. Wear a heavy coat, warm pants, gloves, and insulated boots.")
+    print("\nIt is cold and snowy. Wear a heavy coat, warm pants, gloves, and insulated boots.")
 elif temperature <= 60 and wind_speed >= 20 and weather_type == "rainy":
-    print("The weather is cool, rainy, and windy. Wear a waterproof jacket, jeans, waterproof shoes, and carry an umbrella.")
+    print("\nThe weather is cool, rainy, and windy. Wear a waterproof jacket, jeans, waterproof shoes, and carry an umbrella.")
 elif temperature <= 60 and wind_speed < 20 and weather_type == "rainy":
-    print("The weather is cool and rainy. Wear a raincoat, long-sleeve shirt, pants, and waterproof shoes.")
+    print("\nThe weather is cool and rainy. Wear a raincoat, long-sleeve shirt, pants, and waterproof shoes.")
 elif 41 <= temperature <= 60 and wind_speed >= 15 and weather_type == "sunny":
-    print("It is sunny, mild, and windy. Wear a windbreaker, long-sleeve shirt, pants, and sunglasses.")
+    print("\nIt is sunny, mild, and windy. Wear a windbreaker, long-sleeve shirt, pants, and sunglasses.")
 elif 41 <= temperature <= 60 and wind_speed < 15 and weather_type == "sunny":
-    print("It is sunny and mild. Wear a light jacket, long-sleeve shirt, jeans, and sneakers.")
-elif 61 <= temperature <= 80 and wind_speed >= 15 and weather_type == "sunny":
-    print("It is warm and sunny but breezy. Bring a sweatshirt if needed, wear a t-shirt and jeans, secure loose clothing.")
-elif 61 <= temperature <= 80 and wind_speed < 15 and weather_type == "sunny":
-    print("It is warm and sunny. Wear a t-shirt, jeans or shorts, and comfortable shoes.")
+    print("\nIt is sunny and mild. Wear a light jacket, long-sleeve shirt, jeans, and sneakers.")
+elif 61 <= temperature <= 80 and wind_speed >= 10 and weather_type == "sunny":
+    print("\nIt is warm and sunny but breezy. Bring a sweatshirt if needed, wear a t-shirt and jeans, secure loose clothing.")
+elif 61 <= temperature <= 80 and wind_speed < 10 and weather_type == "sunny":
+    print("\nIt is warm and sunny. Wear a t-shirt, jeans or shorts, and comfortable shoes.")
 elif temperature > 80 and wind_speed >= 15 and weather_type == "sunny":
-    print("It is hot and sunny but breezy. Wear light clothing, sunglasses, and secure loose clothing.")
+    print("\nIt is hot and sunny but breezy. Wear light clothing, sunglasses, and secure loose clothing.")
 elif temperature > 80 and wind_speed < 15 and weather_type == "sunny":
-    print("It is hot and sunny. Wear a tank top, shorts, sandals, and sunglasses. Stay hydrated.")
+    print("\nIt is hot and sunny. Wear a tank top, shorts, sandals, and sunglasses. Stay hydrated.")
 else:
-    print("Dress comfortably and prepare for the current weather conditions.")
+    print("\nDress comfortably and prepare for the current weather conditions.")
 
 
 
