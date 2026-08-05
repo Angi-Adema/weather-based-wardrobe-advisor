@@ -29,11 +29,11 @@ if weather_type not in ["sunny", "rainy", "snowy"]:
 if temperature <= 40 and wind_speed >= 25 and weather_type == "snowy":
     print("\nIt is very cold and windy. Wear a heavy coat, flannel-lined pants, scarf, gloves, and boots.")
 elif temperature <= 40 and wind_speed < 25 and weather_type == "snowy":
-    print("\nIt is cold, snowy, and possibly windy. Wear a heavy coat, warm pants, gloves, and insulated boots.")
+    print("\nIt is cold and snowy with possible gusts of wind. Wear a heavy coat, warm pants, gloves, and insulated boots.")
 elif temperature > 40 and wind_speed >= 20 and weather_type == "snowy":
-    print("\nIt is cooler, snowy, and windy. Wear a coat and scarf, possibly gloves, and boots.")
+    print("\nIt is snowy and windy. Wear a coat and scarf, possibly gloves, and boots.")
 elif temperature > 40 and wind_speed < 20 and weather_type == "snowy":
-    print("\nIt is cooler and snowy. Wear a coat, scarf, and warm shoes.")
+    print("\nIt is snowy with lighter winds. Wear a coat, scarf, and warm shoes.")
 elif temperature <= 40 and wind_speed >= 10 and weather_type == "sunny":
     print("\nIt is cold, sunny, and windy. Wear a warm coat, scarf, gloves, and boots.")
 elif temperature <= 40 and wind_speed < 10 and weather_type == "sunny":
