@@ -58,3 +58,6 @@ else:
 #
 # 2. GeeksforGeeks. (2026, June 16). "Python Lists" GeeksforGeeks.
 #    https://www.geeksforgeeks.org/python/python-lists/
+#
+# 3. Miller, B. (n.d.). "Programming in Python 3" zyBooks, a Wiley Brand.
+#    Canvas https://www.zybooks.com/
