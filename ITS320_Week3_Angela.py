@@ -18,7 +18,7 @@ if wind_speed < 0 or wind_speed > 252:
     wind_speed = int(input("\nPlease enter wind speed in miles per hour (Range 0 - 252 mph; normal is 2): "))  # Reprompt for user input
 
 # Prompt user to enter the weather type (sunny, cloudy, rainy, snowy)
-weather_type = input("\nPlease enter the weather type (sunny, cloudy, rainy, snowy): ").lower()
+weather_type = input("\nPlease enter the weather type (sunny, rainy, snowy): ").lower()
 
 # Validate user input to ensure it is a valid weather type
 if weather_type not in ["sunny", "rainy", "snowy"]:
