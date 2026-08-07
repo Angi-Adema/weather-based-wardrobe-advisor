@@ -62,8 +62,6 @@ else:
     print("\nDress comfortably and prepare for the current weather conditions.")
 
 
-
-
 # REFERENCES
 # 1. GeeksforGeeks. (2026, July 27). "String lower() Method in Python" GeeksforGeeks.
 #    https://www.geeksforgeeks.org/python/python-string-lower/
